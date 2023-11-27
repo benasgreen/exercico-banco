@@ -1,0 +1,22 @@
+{{>partials/header}}
+
+<h1>Novo Usuário</h2>
+
+<form method="POST" action="/novousuario">
+
+    <input type="text" name="name" placeholder="Digite um nome"required/><br>
+    <input type="text" name="age" placeholder="Digite uma idade"required/><br>
+    <input type="submit" value="Cadastrar usuário" />
+
+</form>
+
+<h2> Usuarios do Banco </h2>
+
+<ul>
+    {{#users}}
+        <li>{{name}} - Idade: {{age}}
+    {{/users}}
+
+</ul>
+
+{{>partials/footer}}
